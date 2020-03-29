@@ -2,7 +2,7 @@
 - hosts: localhost
   vars:
     state: present
-    s3_bucket: javahome-tf-1212
+    s3_bucket: javahome-tf-129
     key: terraform.tfstate
     region: us-east-1
     app_env: dev
