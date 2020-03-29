@@ -12,8 +12,7 @@ pipeline{
 		sh "terraform apply -var-file=dev.tfvars -auto-approve"
       }
     }
-	
-   stages{
+
     stage('terraform init and apply - prod'){
       steps{
         sh returnStatus: true, script: 'terraform workspace new prod'
@@ -23,7 +22,7 @@ pipeline{
     }
   } 
   }
-}
+
 def getTerraformPath(){
   def tfHome = tool name: 'terraform-12', type: 'terraform'
   return tfHome
